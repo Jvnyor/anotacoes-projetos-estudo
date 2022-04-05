@@ -13,10 +13,10 @@ public class Solucao {
 	public static String findAge(String input) {
 		List<String> names = new ArrayList<>();
 	
-		String[] string = input.split(";");
-		for (String string2 : string) {
+		String[] persons = input.split(";");
+		for (String person : persons) {
 
-			List<String> personSplit = Arrays.asList(string2.split(", "));
+			List<String> personSplit = Arrays.asList(person.split(", "));
 			String name = Arrays.asList(personSplit.get(0).split(": ")).get(1).trim();
 			String age = Arrays.asList(personSplit.get(1).split(": ")).get(1).trim();
 			if (Integer.parseInt(age) < 29) {
